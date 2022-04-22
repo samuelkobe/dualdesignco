@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100; /* REMOVE this style */
+}
+
+/* grouped repeating styles */
+.contained {
+  @apply flex flex-wrap lg:flex-col lg:px-12 2xl:container 2xl:mx-auto;
+}

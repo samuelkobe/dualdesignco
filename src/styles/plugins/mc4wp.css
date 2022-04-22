@@ -1,0 +1,28 @@
+#mc4wp-form-1 .form-wrapper {
+    @apply flex flex-col space-y-3;
+}
+#mc4wp-form-1 .mc4wp-email, #mc4wp-form-1 .mc4wp-first_name, #mc4wp-form-1 .mc4wp-last_name {
+    @apply
+    text-lg
+    h-12
+    p-2
+    text-brand-black
+    rounded
+    placeholder-brand-main
+    focus:outline-none
+    outline-none
+    focus:text-brand-black
+    border-2
+    border-transparent
+    focus:border-brand-main
+    transition-colors
+    duration-200
+}
+
+#mc4wp-form-1 .submit-wrapper {
+    @apply flex flex-col justify-center items-center xl:flex-row mt-4;
+}
+
+#mc4wp-form-1 .submit {
+    @apply w-40 text-center py-3 px-6 rounded no-underline inline-flex text-white font-bold tracking-wider text-lg bg-brand-main opacity-70 hover:opacity-100 transition-opacity duration-200 uppercase cursor-pointer;
+}

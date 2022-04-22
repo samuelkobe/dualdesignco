@@ -1,0 +1,572 @@
+{
+    "key": "group_5fcece4dbd5cd",
+    "title": "Settings",
+    "fields": [
+        {
+            "key": "field_61a019c615c8f",
+            "label": "Contact Info",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61a019d915c90",
+            "label": "Phone number",
+            "name": "phone_number",
+            "type": "number",
+            "instructions": "Add the phone number with no other characters. i.e. '1234567890'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "i.e. 1234567890",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_61a01a5015c91",
+            "label": "Phone number text",
+            "name": "phone_number_text",
+            "type": "text",
+            "instructions": "Add the phone number structure. i.e. 123-456-7890, 123.456.7890, or (123) 456-7890. This is used to show the visitors the number.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "65",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "i.e. 123-456-7890, 123.456.7890, or (123) 456-7890",
+            "prepend": "",
+            "append": "",
+            "maxlength": 24
+        },
+        {
+            "key": "field_61a01bd7a8fe8",
+            "label": "Contact email",
+            "name": "contact_email",
+            "type": "email",
+            "instructions": "Add the contact email you'd link visitors of the website to use to contact you here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "email@example.com",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_61a0450ef4110",
+            "label": "Open Graph",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_625735e9ee731",
+            "label": "Open Graph Message",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Your Open Graph information consists of text and often an image. This information is what Google, Facebook and other Search Engines and Social Media entities use to show more details about your website's domain\/url.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5da75e896ab1c",
+            "label": "Open Graph Title",
+            "name": "open_graph_title",
+            "type": "text",
+            "instructions": "Add a title for Open Graph (sharing details).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5da75ed86ab1d",
+            "label": "Open Graph URL",
+            "name": "open_graph_url",
+            "type": "url",
+            "instructions": "Add the expected final URL for the website's homepage for Open Graph (sharing details).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5da75f0d6ab1e",
+            "label": "Open Graph Image",
+            "name": "open_graph_image",
+            "type": "image",
+            "instructions": "Add an image for Open Graph. Make sure to add this at the production level image's URL is the same as your website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61043e9808606",
+            "label": "Social Media",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_625737de82b61",
+            "label": "Social Media Toggle",
+            "name": "social_media_toggle",
+            "type": "true_false",
+            "instructions": "Toggle your Social Media on or off. This is will appear in the footer if it is on.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_60a030563c775",
+            "label": "Social Media",
+            "name": "social_media",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_625737de82b61",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_60a0307d3c777",
+            "min": 0,
+            "max": 5,
+            "layout": "table",
+            "button_label": "Add Social Media",
+            "sub_fields": [
+                {
+                    "key": "field_60a032f792a33",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60a0306c3c776",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "small",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_60a0307d3c777",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6257357e7ac36",
+            "label": "Newsletter",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_625735917ac37",
+            "label": "Newsletter Toggle",
+            "name": "newsletter_media_toggle",
+            "type": "true_false",
+            "instructions": "Toggle the newsletter on or off. This is will appear in the footer if it is on. Or on the splash page if it is also on.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_61a03abfd02bf",
+            "label": "Newsletter form embed",
+            "name": "newsletter_form_embed",
+            "type": "wysiwyg",
+            "instructions": "Add your Newsletter embed code from Mailchimp here.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_625735917ac37",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 0,
+            "toolbar": "full",
+            "delay": 0
+        },
+        {
+            "key": "field_61a042244b1e3",
+            "label": "Splash Page",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6257385464e1a",
+            "label": "Splash Page Toggle",
+            "name": "splash_page_toggle",
+            "type": "true_false",
+            "instructions": "If your website is not complete and you just want a splash page up toggle the splash page option to 'On'. This go to Pages > Home Page and select the 'Splash Page Template' as the Template under the Page Attributes section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_619561ea551f3",
+            "label": "Splash page content",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6257385464e1a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This content is only visible on the home page when the splash page template is being used. Check the home page to see which template is being used if you need the splash page to be active.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_608788d0d5c87",
+            "label": "Branding\/Logo",
+            "name": "branding_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6257385464e1a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_60878727d5c85",
+            "label": "Text Color",
+            "name": "text_color",
+            "type": "color_picker",
+            "instructions": "Pick a text color.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6257385464e1a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000000",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_62586f3cb6b05",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "color_picker",
+            "instructions": "Pick a background color.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6257385464e1a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_608788e0d5c88",
+            "label": "Large Text",
+            "name": "large_text",
+            "type": "text",
+            "instructions": "Max Characters 64.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6257385464e1a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_608788f0520a4",
+            "label": "Small Text",
+            "name": "small_text",
+            "type": "textarea",
+            "instructions": "Max Characters 256.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6257385464e1a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 256,
+            "rows": 2,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 40,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1650583695
+}

@@ -1,0 +1,23 @@
+nav ul li {
+    @apply relative;
+}
+
+nav ul li a.menu-anchor {
+    @apply flex px-4 py-2;
+}
+
+nav ul li:hover ul.sub-menu {
+    @apply lg:visible;
+}
+
+nav ul li ul.sub-menu {
+    @apply mb-4 lg:mb-0 mt-2 pb-4 lg:pb-0 border-b-2 border-slate-200 lg:border-none lg:invisible lg:absolute lg:bg-slate-200 right-0 lg:whitespace-nowrap;
+}
+
+nav ul li ul.sub-menu li {
+    
+}
+
+nav ul li ul.sub-menu li a.menu-anchor{
+    @apply flex px-4 py-2 whitespace-nowrap;
+}
