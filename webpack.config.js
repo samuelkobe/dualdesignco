@@ -48,17 +48,9 @@ module.exports = () => {
           }
         }
       },
-      { // add fonts to /fonts dir
-        test: /\.(woff(2)?|ttf|eot|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'fonts',
-              name: '[name].[ext]',
-            },
-          },
-        ],
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
       { // add imgs to /imgs dir
         test: /\.(svg|jpg|png)$/,

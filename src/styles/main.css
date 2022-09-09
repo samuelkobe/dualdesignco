@@ -3,10 +3,43 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-100; /* REMOVE this style */
+  @apply bg-main-alt; /* REMOVE this style */
 }
 
 /* grouped repeating styles */
 .contained {
-  @apply flex flex-wrap lg:flex-col lg:px-12 2xl:container 2xl:mx-auto;
+  @apply flex flex-wrap lg:flex-col px-6 lg:px-12 2xl:container 2xl:mx-auto;
+}
+
+.categories {
+  @apply space-x-1;
+}
+
+.categories > a {
+  @apply bg-brand-alt hover:bg-brand-main rounded shadow text-base uppercase font-button text-center text-black transition-colors duration-300 px-4 pt-3 pb-2 leading-none;
+}
+
+.tags>a {
+  @apply bg-brand-black hover:bg-black rounded shadow text-base uppercase font-button text-center text-white transition-colors duration-300 px-4 pt-3 pb-2 leading-none;
+}
+
+.pagination {
+  @apply flex flex-row justify-center space-x-2 w-full text-2xl lg:text-3xl font-title mt-4 lg:mt-8;
+}
+
+.pagination .page-numbers {
+  @apply p-1 text-center text-brand-black hover:text-brand-fourth transition-colors duration-200;
+}
+
+.pagination .page-numbers.current {
+  @apply text-brand-fourth;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  margin-left: .4em;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+  cursor: pointer;
 }

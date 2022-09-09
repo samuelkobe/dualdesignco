@@ -1,0 +1,17 @@
+.faq-item>h4::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34.121' height='19.182'%3E%3Cpath data-name='Path 274' d='m16111.981 338.971 16 16 16-16' transform='rotate(180 8072.521 178.546)' style='fill:none;stroke:%23A5A281;stroke-width:3px'/%3E%3C/svg%3E%0A");
+    @apply content-[''] bg-contain bg-no-repeat bg-center absolute -right-1/6 sm:-right-1/12 top-0 w-4 md:w-6 h-4 md:h-6 xl:w-8 xl:h-8;
+}
+
+.faq-item>p {
+    @apply h-0 opacity-0 transition-height duration-200 delay-200;
+}
+
+.faq-item.open>h4::after {
+    @apply rotate-0;
+
+}
+
+.faq-item.open>p {
+    @apply h-auto opacity-100 transition-opacity duration-200 delay-200;
+}

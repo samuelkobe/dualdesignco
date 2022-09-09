@@ -1,0 +1,350 @@
+{
+    "key": "group_627da9768e467",
+    "title": "Hero",
+    "fields": [
+        {
+            "key": "field_627da97691e3c",
+            "label": "Hero Type?",
+            "name": "page_hero",
+            "type": "true_false",
+            "instructions": "The <strong>Page hero<\/strong> is the image or video section at the top of a website's web page. This control toggles the Page hero section on or off. Some simple pages do not need a Page hero. This is totally up to you.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Overlay",
+            "ui_off_text": "50\/50"
+        },
+        {
+            "key": "field_627da97691e5d",
+            "label": "Page hero height?",
+            "name": "page_hero_height",
+            "type": "true_false",
+            "instructions": "The <strong>Page hero height<\/strong> can be full or short. Full should be reserved for the home page but it can be used on any page if you wish.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_627da97691e3c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Full",
+            "ui_off_text": "Short"
+        },
+        {
+            "key": "field_62815aebbdf00",
+            "label": "Page hero height fixed",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_627da97691e3c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "message": "Page hero is set to 50\/50. This disables the ability to set the hero height.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_627da97691e4a",
+            "label": "Background type?",
+            "name": "background_type",
+            "type": "true_false",
+            "instructions": "Choose between an image or a video background for the Page hero.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Image",
+            "ui_off_text": "Video"
+        },
+        {
+            "key": "field_627da97691e4e",
+            "label": "Background image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "Upload your image file here. This file should be small (Max 4MB). If you find the image file you are trying to upload is too large and not working reach out to Web Ok Solutions Inc.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_627da97691e4a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 4,
+            "mime_types": ".jpg, .png, .webp"
+        },
+        {
+            "key": "field_627da97691e52",
+            "label": "Background video",
+            "name": "background_video",
+            "type": "file",
+            "instructions": "Upload your video file here. This file should be small (Max 24MB). If you find the video file you are trying to upload is too large and not working reach out to Web Ok Solutions Inc.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_627da97691e4a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": 42,
+            "mime_types": ""
+        },
+        {
+            "key": "field_62828e6d2e98f",
+            "label": "Media Orientation",
+            "name": "media_orientation",
+            "type": "true_false",
+            "instructions": "Choose between and left and right for the image\/video location.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_627da97691e3c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Left",
+            "ui_off_text": "Right"
+        },
+        {
+            "key": "field_627da97691e62",
+            "label": "Hero title",
+            "name": "hero_title",
+            "type": "text",
+            "instructions": "Add a title for the top of this page (Max 32 characters)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 32
+        },
+        {
+            "key": "field_627da97691e66",
+            "label": "Hero content",
+            "name": "hero_content",
+            "type": "textarea",
+            "instructions": "Add a few sentences of content to the hero (Max characters 256).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 258,
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_627da97691e6a",
+            "label": "Button?",
+            "name": "button_toggle",
+            "type": "true_false",
+            "instructions": "Do you want a button in the page hero? To have a call to action button in the hero toggle this to yes.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_627da97691e6f",
+            "label": "Message",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_627da97691e6a",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_627da97691e3c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "message": "The button is turned off. There will be no button in the page hero.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_627da97691e75",
+            "label": "Button",
+            "name": "button_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_627da97691e6a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_6282d06aaf911",
+            "label": "Bottom Spacing",
+            "name": "bottom_spacing",
+            "type": "radio",
+            "instructions": "Choose how much space should be under the header (Default is 0);",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "[0px]": "0px",
+                "[16px]": "16px",
+                "[32px]": "32px",
+                "[48px]": "48px",
+                "[64px]": "64px",
+                "[80px]": "80px"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "[0px]",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/hero"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1652896361
+}

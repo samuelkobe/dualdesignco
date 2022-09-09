@@ -1,0 +1,108 @@
+{
+    "key": "group_62853649bd228",
+    "title": "Steps",
+    "fields": [
+        {
+            "key": "field_6285365038375",
+            "label": "Steps",
+            "name": "steps",
+            "type": "repeater",
+            "instructions": "Add steps from 2 - 5 steps per block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6285366538376",
+            "min": 0,
+            "max": 5,
+            "layout": "row",
+            "button_label": "Add Step",
+            "sub_fields": [
+                {
+                    "key": "field_6285369538378",
+                    "label": "Step Icon\/Image",
+                    "name": "step_icon_image",
+                    "type": "image",
+                    "instructions": "Make sure you upload a smaller file size when adding to this block specifically. The image size for this component is limited to 1MB in file size and must have a 1:1 aspect ratio (perfect square or circle). Icons that are uploaded as .png or .webp file formats that have transparent backgrounds are not restricted to being squares or circles, but the icons Artboard or layer still must be a perfect square. It is recommended that an icon or image with the resolution of 128 x 128 is uploaded.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": 128,
+                    "min_height": 128,
+                    "min_size": "",
+                    "max_width": 512,
+                    "max_height": 512,
+                    "max_size": 1,
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_6285366538376",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Short title for the step (Max 32 Characters).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 32
+                },
+                {
+                    "key": "field_6285367838377",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea",
+                    "instructions": "Add step content here (Max 200 characters).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": 200,
+                    "rows": 4,
+                    "new_lines": "br"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/steps"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1652904309
+}

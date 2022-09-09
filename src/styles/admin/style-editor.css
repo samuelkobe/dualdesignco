@@ -1,0 +1,24 @@
+.wp-block {
+    max-width: 90%;
+}
+
+.wp-block h1,
+.wp-block h2,
+.wp-block h3,
+.wp-block h4,
+.wp-block h5,
+.wp-block h6 {
+    font-weight: 400; /* Added to help fonts in editor that dont have weight 700 that wordpress automatically applies in the editor */
+}
+
+img.theme-override {
+     height: 100% !important;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+h3.theme-override {
+    margin: 0 !important;
+}

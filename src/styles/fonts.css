@@ -1,0 +1,24 @@
+/* FONTS */
+
+/* Neue Haas Grotesk */
+@import url("https://use.typekit.net/oqu6xkc.css");
+/* Miso */
+@import url('https://fonts.cdnfonts.com/css/miso');
+
+@font-face {
+    font-family: 'Grand Slang';
+    src: url('../fonts/GrandSlang-Roman.woff') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'The Impressionist';
+    src: url('../fonts/theimpressionist.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: fallback;
+}

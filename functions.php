@@ -27,8 +27,8 @@ if (function_exists('add_theme_support')) {
     load_theme_textdomain('web-ok-starter', get_template_directory() . '/languages');
 
     // Custom logo support
-    $logo_width  = 240;
-    $logo_height = 128;
+    $logo_width  = 702;
+    $logo_height = 119;
 
     $logo_defaults = array(
         'height'               => $logo_height,
@@ -40,10 +40,27 @@ if (function_exists('add_theme_support')) {
 }
 
 function webokstarter_custom_class_replace( $html ) {
-    $html = str_replace('custom-logo', 'flex shrink w-24 lg:w-inherit', $html );
+    $html = str_replace('custom-logo', 'flex shrink w-full', $html );
     return $html;
 }
 add_filter('get_custom_logo', 'webokstarter_custom_class_replace', 10);
+
+
+ /*------------------------------------*\
+  Theme Settings - Dynamic Styles required
+\*------------------------------------*/
+    // fill-white fill-black - for svg fill
+    // mb-[0px] mb-[16px] mb-[32px] mb-[48px] mb-[64px] mb-[80px] - margin bottom for hero block
+    // rounded-none rounded rouned-2xl rounded-full - image rounded for side by side block
+
+ /*------------------------------------*\
+  Theme Settings - Editor Styles
+\*------------------------------------*/
+function legit_block_editor_styles() {
+    wp_enqueue_style('editor-styles', get_theme_file_uri( 'src/styles/admin/style-editor.css' ), false, '1.0.0', 'all' );
+    wp_enqueue_style('web-ok-starter-styles', get_theme_file_uri( '/style.css' ), false, '1.0.0', 'all');
+} 
+add_action( 'enqueue_block_editor_assets', 'legit_block_editor_styles' );
 
  /*------------------------------------*\
   Theme Settings - Added via ACF
@@ -51,6 +68,159 @@ add_filter('get_custom_logo', 'webokstarter_custom_class_replace', 10);
 if ( function_exists('acf_add_options_page') ) {
     acf_add_options_page('Theme Settings');
 }
+
+ /*------------------------------------*\
+  Block Registry - Added via ACF
+\*------------------------------------*/
+add_action( 'acf/init', 'register_hero_block' );
+function register_hero_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Hero',
+			'title' 				=> __( 'Hero' ),
+			'description' 			=> __( 'Hero block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'hero', 'header', 'banner' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/hero.php',
+			// 'render_callback'	=> 'example_block_render_callback',
+			// 'enqueue_style' 		=> get_template_directory_uri() . '/template-parts/blocks/example/example.css',
+			// 'enqueue_script' 	=> get_template_directory_uri() . '/template-parts/blocks/example/example.js',
+			// 'enqueue_assets' 	=> 'example_block_enqueue_assets',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_cta_block' );
+function register_cta_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Call to action',
+			'title' 				=> __( 'Call to action' ),
+			'description' 			=> __( 'Call to action block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'call to action' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/cta.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_side_by_side_block' );
+function register_side_by_side_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Side by Side',
+			'title' 				=> __( 'Side by Side' ),
+			'description' 			=> __( 'Side by Side block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'side by side', '50/50', 'image and text', 'image', 'text', 'content' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/side-by-side.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_feature_image_block' );
+function register_feature_image_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Feature image',
+			'title' 				=> __( 'Feature image' ),
+			'description' 			=> __( 'Feature image block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'Feature image', 'image and text', 'image', 'text', 'content' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/feature-image.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_paired_images_block' );
+function register_paired_images_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Paired images',
+			'title' 				=> __( 'Paired images' ),
+			'description' 			=> __( 'Paired images block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'Paired images', 'images and text', 'images', 'text', 'content', 'paired' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/paired-images.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_steps_block' );
+function register_steps_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Steps',
+			'title' 				=> __( 'Steps' ),
+			'description' 			=> __( 'Steps block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'steps', 'icon and text', 'icon', 'image', 'text', 'content' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/steps.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_faqs_block' );
+function register_faqs_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'FAQs',
+			'title' 				=> __( 'FAQs' ),
+			'description' 			=> __( 'FAQs block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'FAQ', 'FAQs', 'content' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/faqs.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_package_block' );
+function register_package_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Package',
+			'title' 				=> __( 'Package' ),
+			'description' 			=> __( 'Package block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'package', 'product', 'item' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/package.php',
+		));
+	}
+}
+
+// BLOCK REGISTRY ENDS
 
  /*------------------------------------*\
   Fucntions  
@@ -69,6 +239,9 @@ function footer_scripts()
 {
     wp_register_script('vue-settings', get_template_directory_uri() . '/js/vue-data.js', array(), '1.0.0'); // Custom scripts
     wp_enqueue_script('vue-settings'); // Enqueue
+
+    wp_register_script('faqs', get_template_directory_uri() . '/js/faqs.js', array(), '1.0.0'); // Custom scripts
+    wp_enqueue_script('faqs'); // Enqueue
 }
 
 /* ####### Load styles ####### */
@@ -96,7 +269,7 @@ function webokstarter_nav()
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul class="flex flex-col lg:flex-row w-full text-slate-800 lg:w-auto space-y-2 lg:space-y-0 lg:space-x-2">%3$s</ul>', // The items_wrap lets us put Tailwind CSS classes on the menu's <ul> element.
+		'items_wrap'      => '<ul class="flex flex-col lg:flex-row relative w-full h-auto pt-16 pb-6 lg:pt-0 lg:pb-0 lg:items-center lg:justify-end text-white font-title text-3xl lg:text-base xl:text-lg tracking-wider capitalize lg:w-auto space-y-2 lg:space-y-0 lg:space-x-2">%3$s</ul>', // The items_wrap lets us put Tailwind CSS classes on the menu's <ul> element.
 		'depth'           => 0,
         'add_li_class'    => '',
 		'walker'          => false
@@ -105,11 +278,11 @@ function webokstarter_nav()
 }
 
 /* ####### Footer Navigation ####### */
-function footer_nav_one()
+function footer_nav()
 {
 	wp_nav_menu(
 	array(
-		'theme_location'  => 'footer-menu-one',
+		'theme_location'  => 'footer-menu',
 		'menu'            => '',
 		'container'       => 'div',
 		'container_class' => 'menu-{menu slug}-container',
@@ -122,33 +295,7 @@ function footer_nav_one()
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul class="">%3$s</ul>',
-		'depth'           => 0,
-        'add_li_class'    => '',
-		'walker'          => false
-		)
-	);
-}
-
-/* ####### Footer Navigation ####### */
-function footer_nav_two()
-{
-	wp_nav_menu(
-	array(
-		'theme_location'  => 'footer-menu-two',
-		'menu'            => '',
-		'container'       => 'div',
-		'container_class' => 'menu-{menu slug}-container',
-		'container_id'    => '',
-		'menu_class'      => 'menu',
-		'menu_id'         => '',
-		'echo'            => true,
-		'fallback_cb'     => false,
-		'before'          => '',
-		'after'           => '',
-		'link_before'     => '',
-		'link_after'      => '',
-		'items_wrap'      => '<ul class="">%3$s</ul>',
+		'items_wrap'      => '<ul class="text-base xl:leading-8">%3$s</ul>',
 		'depth'           => 0,
         'add_li_class'    => '',
 		'walker'          => false
@@ -161,8 +308,7 @@ function register_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'web-ok-starter'), // Header/Main Navigation
-        'footer-menu-one' => __('Footer Menu 1', 'web-ok-starter'), // Footer Navigation
-        'footer-menu-two' => __('Footer Menu 2', 'web-ok-starter'), // Footer Navigation
+        'footer-menu' => __('Footer Menu', 'web-ok-starter'), // Footer Navigation
     ));
 }
 
@@ -196,6 +342,53 @@ function add_slug_to_body_class($classes)
 
     return $classes;
 }
+
+// widgets
+// If Dynamic Sidebar Exists
+if (function_exists('register_sidebar'))
+{
+    // Define Sidebar Widget Area 1
+    register_sidebar(array(
+        'name' => __('Widget Area 1', 'html5blank'),
+        'description' => __('Description for this widget-area...', 'html5blank'),
+        'id' => 'widget-area-1',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+
+    // Define Sidebar Widget Area 2
+    register_sidebar(array(
+        'name' => __('Widget Area 2', 'html5blank'),
+        'description' => __('Description for this widget-area...', 'html5blank'),
+        'id' => 'widget-area-2',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
+
+// restrict searchs to only posts
+function SearchFilter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
+
+/**
+ * Halt the main query in the case of an empty search 
+ */
+add_filter( 'posts_search', function( $search, \WP_Query $q )
+{
+    if( ! is_admin() && empty( $search ) && $q->is_search() && $q->is_main_query() )
+        $search .=" AND 0=1 ";
+
+    return $search;
+}, 10, 2 );
 
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
 function webokstarter_wp_pagination()

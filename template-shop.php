@@ -1,10 +1,14 @@
-<?php get_header(); ?>
+<?php /* Template Name: Shop Template */ get_header(); ?>
 
 	<main role="main">
 
 	<?php if ( get_field( 'splash_page_toggle', 'option' ) == 0 ) : ?>
+		
+		<div class="my-28 px-6 lg:container mx-auto lg:my-48 w-full">
 
-		<?php the_content(); ?>
+			<?php the_content(); ?>
+
+		</div>
 		
 	<?php else: ?>
 				
