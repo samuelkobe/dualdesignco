@@ -36,7 +36,21 @@ if ( ! empty( $block['align'] ) ) {
 
     <div class="container mx-auto flex flex-col px-6 lg:px-0 py-8 lg:py-16">
 
-        <div class="w-full flex flex-col items-center">
+	<?php if ( have_rows( 'image_settings' ) ) : ?>
+		<?php while ( have_rows( 'image_settings' ) ) : the_row(); ?>
+
+            <?php
+                if ( get_sub_field( 'media_orientation' ) == 1 ) :
+                        $image_order = 'order-1';
+                    else :
+                        $image_order = 'order-3';
+                endif;  
+            ?>
+
+		<?php endwhile; ?>
+	<?php endif; ?>
+    
+        <div class="w-full flex flex-col items-center order-2 rounded-2xl">
             <?php if ( have_rows( 'content' ) ) : ?>
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
 
@@ -65,18 +79,19 @@ if ( ! empty( $block['align'] ) ) {
             <?php endif; ?>
         </div>
 
-        <div class="w-full md:px-1/12 lg:px-1/6 mb-6">
+        <div class="w-full md:px-1/12 lg:px-1/6 mb-6 <?php echo $image_order; ?>">
             <?php if ( have_rows( 'image_settings' ) ) : ?>
                 <?php while ( have_rows( 'image_settings' ) ) : the_row(); ?>
 
                     <?php 
                         $image = get_sub_field( 'image' );
                         $rounding = get_sub_field( 'image_rounding' );
+                        $img_size = get_sub_field( 'image_size' );
                     ?>
 
-                    <div class="h-full flex items-center">
+                    <div class="h-full flex items-center justify-center">
                         <?php if ( $image ) : ?>
-                            <img class="max-w-full <?php echo $rounding ?>" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+                            <img class="max-w-full shadow-xl <?php echo $rounding . ' ' . $img_size; ?>" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
                         <?php endif; ?>
                     </div>
 

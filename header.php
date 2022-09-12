@@ -14,6 +14,10 @@
 		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 
 		<?php wp_head(); ?>
+		
+		<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
 		<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 		<script src="https://unpkg.com/vue@3"></script>

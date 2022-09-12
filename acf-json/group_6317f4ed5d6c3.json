@@ -1,0 +1,173 @@
+{
+    "key": "group_6317f4ed5d6c3",
+    "title": "Testimonials",
+    "fields": [
+        {
+            "key": "field_6317f4ed5f8cb",
+            "label": "Testimonials group title",
+            "name": "testimonials_group_title",
+            "type": "text",
+            "instructions": "Add a short title for the group of testimonials in this block (Max 128 characters).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 128
+        },
+        {
+            "key": "field_6317f4ed5f8d0",
+            "label": "Testimonials",
+            "name": "testimonials",
+            "type": "repeater",
+            "instructions": "Add up to 15 Testimonials per block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6317f4ed61bc5",
+            "min": 0,
+            "max": 15,
+            "layout": "block",
+            "button_label": "Add",
+            "sub_fields": [
+                {
+                    "key": "field_6317f4ed61bc5",
+                    "label": "Author",
+                    "name": "author",
+                    "type": "text",
+                    "instructions": "Add testimonial's author name (Max 32 Characters).",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 32
+                },
+                {
+                    "key": "field_6317f4ed61bca",
+                    "label": "Location",
+                    "name": "location",
+                    "type": "text",
+                    "instructions": "Add author location (Max 64 Characters). i.e. 'Vancouver, BC'",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 64
+                },
+                {
+                    "key": "field_631ecfc6ed66b",
+                    "label": "Association",
+                    "name": "association",
+                    "type": "text",
+                    "instructions": "Add author association (Max 64 Characters). i.e. 'Client'",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 64
+                },
+                {
+                    "key": "field_6317f59ca31cb",
+                    "label": "Quote",
+                    "name": "quote",
+                    "type": "textarea",
+                    "instructions": "Add what they have said (Max 512 characters).",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": 512,
+                    "rows": 4,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6317f4ed5f8d4",
+            "label": "Bottom Spacing",
+            "name": "bottom_spacing",
+            "type": "radio",
+            "instructions": "Choose how much space should be under this block (Default is 0);",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "[0px]": "none (0px)",
+                "[16px]": "xs (16px)",
+                "[32px]": "sm (32px)",
+                "[48px]": "md (48px)",
+                "[64px]": "lg (64px)",
+                "[80px]": "xl (80px)",
+                "[96px]": "2xl (96px)",
+                "[112px]": "3xl (112px)",
+                "[128px]": "4xl (128px)",
+                "[156px]": "5xl (156px)"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 8,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1662963825
+}

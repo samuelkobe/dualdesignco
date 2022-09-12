@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-main-alt; /* REMOVE this style */
+  @apply bg-white; /* REMOVE this style */
 }
 
 /* grouped repeating styles */
@@ -33,6 +33,10 @@ body {
 
 .pagination .page-numbers.current {
   @apply text-brand-fourth;
+}
+
+.swiper-pagination-bullet {
+    @apply w-5 lg:w-6 h-[4px] rounded-none bg-[#000000] #{!important};
 }
 
 input[type="search"]::-webkit-search-cancel-button {

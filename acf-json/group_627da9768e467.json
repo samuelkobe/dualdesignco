@@ -179,13 +179,40 @@
             "ui_off_text": "Right"
         },
         {
+            "key": "field_631d2a0e52aeb",
+            "label": "Hero content settings?",
+            "name": "hero_content_settings_toggle",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Standard",
+            "ui_off_text": "Styled"
+        },
+        {
             "key": "field_627da97691e62",
             "label": "Hero title",
             "name": "hero_title",
             "type": "text",
             "instructions": "Add a title for the top of this page (Max 32 characters)",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631d2a0e52aeb",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "40",
                 "class": "",
@@ -204,7 +231,15 @@
             "type": "textarea",
             "instructions": "Add a few sentences of content to the hero (Max characters 256).",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631d2a0e52aeb",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "60",
                 "class": "",
@@ -215,6 +250,181 @@
             "maxlength": 258,
             "rows": 4,
             "new_lines": "br"
+        },
+        {
+            "key": "field_631d2ac852aec",
+            "label": "Hero Stylized content line 1",
+            "name": "hero_stylized_content_line_1",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631d2a0e52aeb",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 48
+        },
+        {
+            "key": "field_631d2b0552aee",
+            "label": "Hero Stylized content line 2",
+            "name": "hero_stylized_content_line_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631d2a0e52aeb",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 48
+        },
+        {
+            "key": "field_631d2b0152aed",
+            "label": "Hero Stylized content line 3",
+            "name": "hero_stylized_content_line_3",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631d2a0e52aeb",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 48
+        },
+        {
+            "key": "field_631d07bf8178c",
+            "label": "Hero content background texture?",
+            "name": "hero_content_background_texture_toggle",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_627da97691e3c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_631d08278178e",
+            "label": "Hero content background texture",
+            "name": "hero_content_background_texture",
+            "type": "image",
+            "instructions": "Upload a texture image that repeats seamlessly here. This content background texture is only visible if 'Background type' is set to 50\/50.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631d07bf8178c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_627da97691e3c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_631d07e98178d",
+            "label": "Hero content background text off.",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631d07bf8178c",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_627da97691e3c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "message": "Hero content background texture is currently off.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_627da97691e6a",
@@ -237,7 +447,7 @@
         },
         {
             "key": "field_627da97691e6f",
-            "label": "Message",
+            "label": "Button off.",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -247,11 +457,6 @@
                     {
                         "field": "field_627da97691e6a",
                         "operator": "!=",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_627da97691e3c",
-                        "operator": "==",
                         "value": "1"
                     }
                 ]
@@ -293,7 +498,7 @@
             "label": "Bottom Spacing",
             "name": "bottom_spacing",
             "type": "radio",
-            "instructions": "Choose how much space should be under the header (Default is 0);",
+            "instructions": "Choose how much space should be below this block (Default is 0);",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -307,7 +512,11 @@
                 "[32px]": "32px",
                 "[48px]": "48px",
                 "[64px]": "64px",
-                "[80px]": "80px"
+                "[80px]": "80px",
+                "[96px]": "96px",
+                "[112px]": "112px",
+                "[128px]": "128px",
+                "[156px]": "156px"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -346,5 +555,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652896361
+    "modified": 1662856053
 }

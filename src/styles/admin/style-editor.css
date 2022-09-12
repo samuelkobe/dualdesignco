@@ -22,3 +22,26 @@ p {
 h3.theme-override {
     margin: 0 !important;
 }
+
+ .testimonials-wrapper-div {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+
+ .testimonials-wrapper-div:after {
+    z-index: 9999;
+    content: "Testimonial preview unavailable. The JS library is not loaded here to save resources. This is normal, please check the front-end of the website to see testimonials. You may still add, remove, and edit testmonials by clicking on this block." !important;
+    display: inline-block !important;
+    color: #000000 !important;
+    background-color: #e4be40 !important;
+    border-radius: 12px !important;
+    border: 1 solid transparent !important;
+    margin: 24px !important;
+    padding: 24px !important;
+ }
+
+  .testimonials-wrapper-div div {
+    display: none !important;
+    position: relative !important;
+ }

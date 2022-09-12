@@ -3,6 +3,159 @@
     "title": "Steps",
     "fields": [
         {
+            "key": "field_631e6f603c33d",
+            "label": "Background Settings",
+            "name": "background_settings",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_631e6eb53c339",
+                    "label": "Background texture?",
+                    "name": "background_texture_toggle",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No"
+                },
+                {
+                    "key": "field_631e6ed93c33b",
+                    "label": "Repeated Texture or Cover?",
+                    "name": "repeated_texture_or_cover",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631e6eb53c339",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Repeat",
+                    "ui_off_text": "Cover"
+                },
+                {
+                    "key": "field_631e6ecb3c33a",
+                    "label": "Background Texture",
+                    "name": "background_texture",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631e6eb53c339",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_631e6ff23c33e",
+                    "label": "Background Texture Off",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631e6eb53c339",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "67",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_631e6e253c338",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "radio",
+                    "instructions": "Choose the background colour for each step with these radio button choices.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631e6eb53c339",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "bg-transparent": "Transparent",
+                        "bg-white": "White",
+                        "bg-brand-alt": "Grey"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "transparent",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                }
+            ]
+        },
+        {
             "key": "field_6285365038375",
             "label": "Steps",
             "name": "steps",
@@ -69,7 +222,7 @@
                     "label": "Content",
                     "name": "content",
                     "type": "textarea",
-                    "instructions": "Add step content here (Max 200 characters).",
+                    "instructions": "Add step content here (Max 240 characters).",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -79,7 +232,7 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "maxlength": 200,
+                    "maxlength": 240,
                     "rows": 4,
                     "new_lines": "br"
                 }
@@ -104,5 +257,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652904309
+    "modified": 1662958057
 }

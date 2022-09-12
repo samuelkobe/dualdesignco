@@ -1,0 +1,550 @@
+{
+    "key": "group_631ebe611b98e",
+    "title": "50\/50 Services",
+    "fields": [
+        {
+            "key": "field_631ebe611f993",
+            "label": "Title?",
+            "name": "title_toggle",
+            "type": "true_false",
+            "instructions": "Toggle the Title portion of this block on or off.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_631ebe611f9a2",
+            "label": "Title Off",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631ebe611f993",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "message": "This block's title content is currently toggled off.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_631ebe611f99d",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Add a short title (Max 64 Characters)",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631ebe611f993",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 60
+        },
+        {
+            "key": "field_631ebe611e65d",
+            "label": "Left Content",
+            "name": "left_content",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_631ebe611f9a7",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "Add a short name (Max 32 Characters)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 32
+                },
+                {
+                    "key": "field_631ebe611f9ac",
+                    "label": "Paragraph?",
+                    "name": "content_toggle",
+                    "type": "true_false",
+                    "instructions": "Toggle the paragraph portion of this block on or off.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "On",
+                    "ui_off_text": "Off"
+                },
+                {
+                    "key": "field_631ebe611f9b0",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea",
+                    "instructions": "Add content.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631ebe611f9ac",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": 512,
+                    "rows": 4,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_631ebe611f9b5",
+                    "label": "Paragraph Off",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631ebe611f9ac",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This block's paragraph content is currently toggled off.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_631ebe612d7f9",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Choose the left image.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "small",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_631ebe611f9b9",
+                    "label": "Button?",
+                    "name": "button_toggle",
+                    "type": "true_false",
+                    "instructions": "Toggle the button on or off. Default 'off'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "On",
+                    "ui_off_text": "Off"
+                },
+                {
+                    "key": "field_631ebe611f9bd",
+                    "label": "Button link",
+                    "name": "button_link",
+                    "type": "link",
+                    "instructions": "Choose the text and url for the button link.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631ebe611f9b9",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_631ebe611f9c1",
+                    "label": "Button Off",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631ebe611f9b9",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This block's button is currently toggled off.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
+        },
+        {
+            "key": "field_631ec2f22ee91",
+            "label": "Right Content",
+            "name": "right_content",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_631ec2f22ee92",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "Add a short name (Max 32 Characters)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 32
+                },
+                {
+                    "key": "field_631ec2f22ee93",
+                    "label": "Paragraph?",
+                    "name": "content_toggle",
+                    "type": "true_false",
+                    "instructions": "Toggle the paragraph portion of this block on or off.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "On",
+                    "ui_off_text": "Off"
+                },
+                {
+                    "key": "field_631ec2f22ee94",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea",
+                    "instructions": "Add content.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631ec2f22ee93",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": 512,
+                    "rows": 4,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_631ec2f22ee95",
+                    "label": "Paragraph Off",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631ec2f22ee93",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This block's paragraph content is currently toggled off.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_631ec2f22ee96",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Choose the left image.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "small",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_631ec2f22ee97",
+                    "label": "Button?",
+                    "name": "button_toggle",
+                    "type": "true_false",
+                    "instructions": "Toggle the button on or off. Default 'off'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "On",
+                    "ui_off_text": "Off"
+                },
+                {
+                    "key": "field_631ec2f22ee98",
+                    "label": "Button link",
+                    "name": "button_link",
+                    "type": "link",
+                    "instructions": "Choose the text and url for the button link.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631ec2f22ee97",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_631ec2f22ee99",
+                    "label": "Button Off",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631ec2f22ee97",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This block's button is currently toggled off.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
+        },
+        {
+            "key": "field_631ebe612c6e2",
+            "label": "Image Rounding",
+            "name": "image_rounding",
+            "type": "radio",
+            "instructions": "Choose the treatment on the image's rounding. If you want a perfect circle make sure to use an image with a aspect ratio of 1:1 and select 'Full Rounded'",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "rounded-none": "No rounding",
+                "rounded": "Rounded",
+                "rounded-2xl": "More rounded",
+                "rounded-full": "Full rounded"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_631ebe611e669",
+            "label": "Bottom Spacing",
+            "name": "bottom_spacing",
+            "type": "radio",
+            "instructions": "Choose how much space should be below this block (Default is 0);",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "[0px]": "0px",
+                "[16px]": "16px",
+                "[32px]": "32px",
+                "[48px]": "48px",
+                "[64px]": "64px",
+                "[80px]": "80px",
+                "[96px]": "96px",
+                "[112px]": "112px",
+                "[128px]": "128px",
+                "[156px]": "156px"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "[0px]",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/fifty-fifty-services"
+            }
+        ]
+    ],
+    "menu_order": 7,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1662962913
+}

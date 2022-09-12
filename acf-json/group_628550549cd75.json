@@ -85,7 +85,7 @@
             "label": "Bottom Spacing",
             "name": "bottom_spacing",
             "type": "radio",
-            "instructions": "Choose how much space should be under the header (Default is 0);",
+            "instructions": "Choose how much space should be below this block (Default is 0);",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -99,11 +99,15 @@
                 "[32px]": "32px",
                 "[48px]": "48px",
                 "[64px]": "64px",
-                "[80px]": "80px"
+                "[80px]": "80px",
+                "[96px]": "96px",
+                "[112px]": "112px",
+                "[128px]": "128px",
+                "[156px]": "156px"
             },
             "allow_null": 0,
             "other_choice": 0,
-            "default_value": "",
+            "default_value": "[0px]",
             "layout": "horizontal",
             "return_format": "value",
             "save_other_choice": 0
@@ -127,5 +131,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652904551
+    "modified": 1662850592
 }

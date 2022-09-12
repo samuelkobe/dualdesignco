@@ -79,11 +79,13 @@ if ( ! empty( $block['align'] ) ) {
 
                                 <div class="flex flex-col w-full md:w-1/2 relative">
                                     
-                                    <h4 class="absolute bottom-4 left-4 w-20 text-center uppercase font-button text-lg leading-none bg-brand-fourth text-white pt-3 pb-2 rounded"><?php the_sub_field( 'left_header' ); ?></h4>
+                                    <?php if ( get_sub_field( 'tag' ) == 1 ) : ?>
+                                        <h4 class="absolute bottom-4 left-4 w-20 text-center uppercase font-button text-lg leading-none bg-brand-fourth text-white pt-3 pb-2 rounded"><?php the_sub_field( 'left_header' ); ?></h4>
+                                    <?php endif; ?>
 
                                     <div class="">
                                         <?php if ( $left_image ) : ?>
-                                            <img class="w-full h-72 sm:h-80 md:h-64 lg:h-80 xl:h-96 object-cover max-w-full <?php echo $rounding ?>" src="<?php echo esc_url( $left_image['url'] ); ?>" alt="<?php echo esc_attr( $left_image['alt'] ); ?>" />
+                                            <img class="w-full h-72 sm:h-80 md:h-64 lg:h-80 xl:h-96 shadow-xl object-cover max-w-full <?php echo $rounding ?>" src="<?php echo esc_url( $left_image['url'] ); ?>" alt="<?php echo esc_attr( $left_image['alt'] ); ?>" />
                                         <?php endif; ?>
                                     </div>
                                 </div>
@@ -98,11 +100,13 @@ if ( ! empty( $block['align'] ) ) {
 
                                 <div class="flex flex-col w-full md:w-1/2 relative">
                                     
-                                    <h4 class="absolute bottom-4 left-4 w-20 text-center uppercase font-button text-lg leading-none bg-brand-black text-white pt-3 pb-2 rounded"><?php the_sub_field( 'right_header' ); ?></h4>    
+                                    <?php if ( get_sub_field( 'tag' ) == 1 ) : ?>
+                                        <h4 class="absolute bottom-4 left-4 w-20 text-center uppercase font-button text-lg leading-none bg-brand-black text-white pt-3 pb-2 rounded"><?php the_sub_field( 'right_header' ); ?></h4>    
+                                    <?php endif; ?>
 
                                     <div class="">
                                         <?php if ( $right_image ) : ?>
-                                            <img class="w-full h-72 sm:h-80 md:h-64 lg:h-80 xl:h-96 object-cover max-w-full <?php echo $rounding ?>" src="<?php echo esc_url( $right_image['url'] ); ?>" alt="<?php echo esc_attr( $right_image['alt'] ); ?>" />
+                                            <img class="w-full h-72 sm:h-80 md:h-64 lg:h-80 xl:h-96 shadow-xl object-cover max-w-full <?php echo $rounding ?>" src="<?php echo esc_url( $right_image['url'] ); ?>" alt="<?php echo esc_attr( $right_image['alt'] ); ?>" />
                                         <?php endif; ?>
                                     </div>
                                 </div>

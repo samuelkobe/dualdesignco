@@ -55,7 +55,7 @@ if ( ! empty( $block['align'] ) ) {
 
                     <div class="h-full flex items-center">
                         <?php if ( $image ) : ?>
-                            <img class="max-w-full <?php echo $rounding ?>" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+                            <img class="max-w-full shadow-xl object-cover aspect-square <?php echo $rounding ?>" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
                         <?php endif; ?>
                     </div>
 
@@ -66,8 +66,8 @@ if ( ! empty( $block['align'] ) ) {
         <div class="w-full lg:w-7/12 flex flex-col justify-center <?php echo $content_order . ' ' . $content_padding ;?>">
             <?php if ( have_rows( 'content' ) ) : ?>
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
-                    <h2 class="my-4 font-title text-3xl lg:text-4xl 2xl:text-6xl"><?php the_sub_field( 'header' ); ?></h2>
-                    <p class="font-normal text-base lg:text-lg 2xl:text-xl w-full"><?php the_sub_field( 'content' ); ?></p>
+                    <h2 class="mt-4 font-title text-3xl lg:text-4xl 2xl:text-6xl 2xl:leading-tight"><?php the_sub_field( 'header' ); ?></h2>
+                    <p class="font-normal text-base lg:text-lg 2xl:text-xl w-full mt-8 2xl:leading-relaxed"><?php the_sub_field( 'content' ); ?></p>
                     <?php if ( get_sub_field( 'button_toggle' ) == 1 ) : ?>
                         <?php $button_link = get_sub_field( 'button_link' ); ?>            
                         <?php if ( $button_link ) : ?>

@@ -11,6 +11,9 @@ module.exports = {
           black: '#2D333A',
         }
       },
+      boxShadow: {
+        'custom': '0 6px 9px -2px rgb(0 0 0 / 0.4)',
+      },
       flexShrink: {
         '4': 4
       },

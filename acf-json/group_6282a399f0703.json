@@ -3,42 +3,29 @@
     "title": "Call to action",
     "fields": [
         {
-            "key": "field_6282a3fdff2b5",
-            "label": "Title",
-            "name": "title",
-            "type": "text",
-            "instructions": "Title (Max 32 Characters).",
-            "required": 1,
+            "key": "field_631eb22a55582",
+            "label": "Background Colour",
+            "name": "background_colour",
+            "type": "radio",
+            "instructions": "Choose the Call to Action's background colour.",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": 32
-        },
-        {
-            "key": "field_6282a414ff2b6",
-            "label": "Content",
-            "name": "content",
-            "type": "textarea",
-            "instructions": "Title (Max 256 Characters).",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
+            "choices": {
+                "brand-main": "Beige",
+                "white": "White",
+                "brand-alt": "Grey"
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": 256,
-            "rows": 4,
-            "new_lines": "br"
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "main",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_6282c3f61fd79",
@@ -49,7 +36,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -58,6 +45,33 @@
             "ui": 1,
             "ui_on_text": "Yes",
             "ui_off_text": "No"
+        },
+        {
+            "key": "field_631d0afb932c5",
+            "label": "Background texture type?",
+            "name": "background_texture_type",
+            "type": "true_false",
+            "instructions": "Choose between background textures that repeat or that cover the full width of the object it is inside of.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6282c3f61fd79",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Repeat",
+            "ui_off_text": "Cover"
         },
         {
             "key": "field_6282c46a1fd7b",
@@ -76,7 +90,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -108,13 +122,159 @@
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "message": "This Call to action block is not using a background pattern. It will default to a brand colour.",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_631ea64f08591",
+            "label": "Content Type?",
+            "name": "content_type_toggle",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Content",
+            "ui_off_text": "Bullets"
+        },
+        {
+            "key": "field_6282a3fdff2b5",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Title (Max 32 Characters).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "65",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 32
+        },
+        {
+            "key": "field_631ea2f5c2969",
+            "label": "Content alignment?",
+            "name": "content_alignment_choice",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631ea64f08591",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "left",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6282a414ff2b6",
+            "label": "Content",
+            "name": "content",
+            "type": "textarea",
+            "instructions": "Title (Max 256 Characters).",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631ea64f08591",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "65",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 256,
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_631ea6a308592",
+            "label": "Bullet",
+            "name": "bullet",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631ea64f08591",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_631ea6ba08593",
+            "min": 1,
+            "max": 12,
+            "layout": "block",
+            "button_label": "Add Bullet",
+            "sub_fields": [
+                {
+                    "key": "field_631ea6ba08593",
+                    "label": "Bullet Content",
+                    "name": "bullet_content",
+                    "type": "text",
+                    "instructions": "Short bullet points (max 128 characters).",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 128
+                }
+            ]
         },
         {
             "key": "field_6282a3ddff2b4",
@@ -202,5 +362,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652898016
+    "modified": 1662956165
 }

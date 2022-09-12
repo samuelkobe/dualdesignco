@@ -50,8 +50,13 @@ add_filter('get_custom_logo', 'webokstarter_custom_class_replace', 10);
   Theme Settings - Dynamic Styles required
 \*------------------------------------*/
     // fill-white fill-black - for svg fill
-    // mb-[0px] mb-[16px] mb-[32px] mb-[48px] mb-[64px] mb-[80px] - margin bottom for hero block
-    // rounded-none rounded rouned-2xl rounded-full - image rounded for side by side block
+	// lg:translate-x-1/6 xl:translate-x-1/4 lg:-translate-x-1/6 xl:-translate-x-1/4 - hero setting for translating content left or right.
+    // mb-[0px] mb-[16px] mb-[32px] mb-[48px] mb-[64px] mb-[80px] mb-[96px] mb-[112px] mb-[128px] mb-[156px] - margin bottom for blocks
+	// lg:mb-[0px] lg:mb-[16px] lg:mb-[32px] lg:mb-[48px] lg:mb-[64px] lg:mb-[80px] lg:mb-[96px] lg:mb-[112px] lg:mb-[128px] lg:mb-[156px] - margin bottom for blocks in large viewport
+    // rounded-none rounded rounded-2xl rounded-full - image rounded for side by side block
+    // w-full lg:w-1/4 lg:w-1/2 lg:w-3/4 lg:w-full - image size for feature image block
+	// shadow-custom bg-transparent bg-white bg-brand-alt - steps bg style
+
 
  /*------------------------------------*\
   Theme Settings - Editor Styles
@@ -84,7 +89,7 @@ function register_hero_block() {
 			'keywords'				=> array( 'hero', 'header', 'banner' ),
 			'post_types'			=> array( 'post', 'page' ),
 			'mode'					=> 'auto',
-			'align'				=> 'wide',
+			'align'					=> 'wide',
 			'render_template'		=> 'parts/blocks/hero.php',
 			// 'render_callback'	=> 'example_block_render_callback',
 			// 'enqueue_style' 		=> get_template_directory_uri() . '/template-parts/blocks/example/example.css',
@@ -106,7 +111,7 @@ function register_cta_block() {
 			'keywords'				=> array( 'call to action' ),
 			'post_types'			=> array( 'post', 'page' ),
 			'mode'					=> 'auto',
-			'align'				=> 'wide',
+			'align'					=> 'wide',
 			'render_template'		=> 'parts/blocks/cta.php',
 		));
 	}
@@ -142,7 +147,7 @@ function register_feature_image_block() {
 			'keywords'				=> array( 'Feature image', 'image and text', 'image', 'text', 'content' ),
 			'post_types'			=> array( 'post', 'page' ),
 			'mode'					=> 'auto',
-			'align'				=> 'wide',
+			'align'					=> 'wide',
 			'render_template'		=> 'parts/blocks/feature-image.php',
 		));
 	}
@@ -160,7 +165,7 @@ function register_paired_images_block() {
 			'keywords'				=> array( 'Paired images', 'images and text', 'images', 'text', 'content', 'paired' ),
 			'post_types'			=> array( 'post', 'page' ),
 			'mode'					=> 'auto',
-			'align'				=> 'wide',
+			'align'					=> 'wide',
 			'render_template'		=> 'parts/blocks/paired-images.php',
 		));
 	}
@@ -178,7 +183,7 @@ function register_steps_block() {
 			'keywords'				=> array( 'steps', 'icon and text', 'icon', 'image', 'text', 'content' ),
 			'post_types'			=> array( 'post', 'page' ),
 			'mode'					=> 'auto',
-			'align'				=> 'wide',
+			'align'					=> 'wide',
 			'render_template'		=> 'parts/blocks/steps.php',
 		));
 	}
@@ -196,7 +201,7 @@ function register_faqs_block() {
 			'keywords'				=> array( 'FAQ', 'FAQs', 'content' ),
 			'post_types'			=> array( 'post', 'page' ),
 			'mode'					=> 'auto',
-			'align'				=> 'wide',
+			'align'					=> 'wide',
 			'render_template'		=> 'parts/blocks/faqs.php',
 		));
 	}
@@ -214,8 +219,44 @@ function register_package_block() {
 			'keywords'				=> array( 'package', 'product', 'item' ),
 			'post_types'			=> array( 'post', 'page' ),
 			'mode'					=> 'auto',
-			'align'				=> 'wide',
+			'align'					=> 'wide',
 			'render_template'		=> 'parts/blocks/package.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_fifty_fifty_block' );
+function register_fifty_fifty_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Fifty Fifty Services',
+			'title' 				=> __( '50/50 Services' ),
+			'description' 			=> __( '50/50 services block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( '50/50', 'fifty fifty', 'services' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'					=> 'wide',
+			'render_template'		=> 'parts/blocks/fifty-fifty.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_testimonials_block' );
+function register_testimonials_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Testimonials',
+			'title' 				=> __( 'Testimonials' ),
+			'description' 			=> __( 'Testimonials block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'testimonials' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/testimonials.php',
 		));
 	}
 }
