@@ -86,11 +86,13 @@ if ( have_rows( 'id' ) ) : ?>
 
 <script type="module">
     // init homeSwiper:
-    const homeSwiper = new Swiper(".swiper", {
+    const testimonialsSwiper = new Swiper(".swiper", {
     slidesPerView: 1,   
     loop: true,
-    autoplay: true,
-    speed: 3000,
+    autoplay: {
+        delay: 5500,
+    },
+    speed: 1000,
     allowTouchMove: true,
     simulateTouch: true,
     grabCursor: true,

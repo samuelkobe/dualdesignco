@@ -171,6 +171,24 @@ function register_paired_images_block() {
 	}
 }
 
+add_action( 'acf/init', 'register_paired_slider_block' );
+function register_paired_slider_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Paired slider',
+			'title' 				=> __( 'Paired slider' ),
+			'description' 			=> __( 'Paired slider block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'Paired slider', 'images and text', 'images', 'text', 'content', 'paired', 'slider', 'carousel' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'					=> 'wide',
+			'render_template'		=> 'parts/blocks/paired-slider.php',
+		));
+	}
+}
+
 add_action( 'acf/init', 'register_steps_block' );
 function register_steps_block() {
 	if ( function_exists( 'acf_register_block_type' ) ) {
