@@ -135,6 +135,24 @@ function register_side_by_side_block() {
 	}
 }
 
+add_action( 'acf/init', 'register_side_by_side_slider_block' );
+function register_side_by_side_slider_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Side by Side slider',
+			'title' 				=> __( 'Side by Side slider' ),
+			'description' 			=> __( 'Side by Side slider block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'side by side', '50/50', 'image and text', 'image', 'text', 'content', 'slider', 'carousel' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/side-by-side-slider.php',
+		));
+	}
+}
+
 add_action( 'acf/init', 'register_feature_image_block' );
 function register_feature_image_block() {
 	if ( function_exists( 'acf_register_block_type' ) ) {
@@ -273,11 +291,30 @@ function register_testimonials_block() {
 			'keywords'				=> array( 'testimonials' ),
 			'post_types'			=> array( 'post', 'page' ),
 			'mode'					=> 'auto',
-			'align'				=> 'wide',
+			'align'					=> 'wide',
 			'render_template'		=> 'parts/blocks/testimonials.php',
 		));
 	}
 }
+
+add_action( 'acf/init', 'register_custom_form_block' );
+function register_custom_form_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Custom Form',
+			'title' 				=> __( 'Custom Form' ),
+			'description' 			=> __( 'Custom Form block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'custom', 'form' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'					=> 'wide',
+			'render_template'		=> 'parts/blocks/custom-form.php',
+		));
+	}
+}
+
 
 // BLOCK REGISTRY ENDS
 
@@ -301,6 +338,9 @@ function footer_scripts()
 
     wp_register_script('faqs', get_template_directory_uri() . '/js/faqs.js', array(), '1.0.0'); // Custom scripts
     wp_enqueue_script('faqs'); // Enqueue
+
+	wp_register_script('swiper-comps', get_template_directory_uri() . '/js/swiper/swiper-comps.js', array(), '1.0.0'); // Custom scripts
+    wp_enqueue_script('swiper-comps'); // Enqueue
 }
 
 /* ####### Load styles ####### */

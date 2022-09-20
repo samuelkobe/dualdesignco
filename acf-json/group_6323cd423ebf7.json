@@ -1,0 +1,292 @@
+{
+    "key": "group_6323cd423ebf7",
+    "title": "Side By Side Slider",
+    "fields": [
+        {
+            "key": "field_6323cd4241c8b",
+            "label": "Image Orientation",
+            "name": "image_orientation_side_by_side",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Left",
+            "ui_off_text": "Right"
+        },
+        {
+            "key": "field_6323cd4241c91",
+            "label": "Image",
+            "name": "image_settings",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6323cda49cf93",
+                    "label": "Images",
+                    "name": "images",
+                    "type": "gallery",
+                    "instructions": "Choose an images for this block.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "insert": "append",
+                    "library": "all",
+                    "min": "",
+                    "max": "",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_6323cd42441be",
+                    "label": "Image Rounding",
+                    "name": "image_rounding",
+                    "type": "radio",
+                    "instructions": "Choose the treatment on the image's rounding. If you want a perfect circle make sure to use an image with a aspect ratio of 1:1 and select 'Full Rounded'",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "rounded-none": "No rounding",
+                        "rounded": "Rounded",
+                        "rounded-2xl": "More rounded",
+                        "rounded-full": "Full rounded"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_6323d454998ae",
+                    "label": "Image Shape",
+                    "name": "image_shape",
+                    "type": "radio",
+                    "instructions": "Choose the treatment on the image's shape. 1:1 square or 16:9 rectangle.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "aspect-square": "Square",
+                        "aspect-video": "Rectangle (landscape)."
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                }
+            ]
+        },
+        {
+            "key": "field_6323cd4241c95",
+            "label": "Content",
+            "name": "content",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6323cd4248689",
+                    "label": "Header",
+                    "name": "header",
+                    "type": "text",
+                    "instructions": "Add a short header (Max 32 Characters)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 48
+                },
+                {
+                    "key": "field_6323cd4248690",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea",
+                    "instructions": "Add content.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": 512,
+                    "rows": 4,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_6323cd4248694",
+                    "label": "Button?",
+                    "name": "button_toggle",
+                    "type": "true_false",
+                    "instructions": "Toggle the button on or off. Default 'off'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No"
+                },
+                {
+                    "key": "field_6323cd4248698",
+                    "label": "Button link",
+                    "name": "button_link",
+                    "type": "link",
+                    "instructions": "Choose the text and url for the button link.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6323cd4248694",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_6323cd424869c",
+                    "label": "Button Off",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6323cd4248694",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This block's button is currently toggled off.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
+        },
+        {
+            "key": "field_6323cd4241c99",
+            "label": "Bottom Spacing",
+            "name": "bottom_spacing",
+            "type": "radio",
+            "instructions": "Choose how much space should be below this block (Default is 0);",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "[0px]": "0px",
+                "[16px]": "16px",
+                "[32px]": "32px",
+                "[48px]": "48px",
+                "[64px]": "64px",
+                "[80px]": "80px",
+                "[96px]": "96px",
+                "[112px]": "112px",
+                "[128px]": "128px",
+                "[156px]": "156px"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "[0px]",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/side-by-side-slider"
+            }
+        ]
+    ],
+    "menu_order": 6,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1663292604
+}

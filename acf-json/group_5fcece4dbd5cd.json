@@ -43,6 +43,25 @@
             "mime_types": ""
         },
         {
+            "key": "field_61a01a5015c91",
+            "label": "Phone number text",
+            "name": "phone_number_text",
+            "type": "text",
+            "instructions": "Add the phone number structure. i.e. 123-456-7890, 123.456.7890, or (123) 456-7890. This is used to show the visitors the number.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "65",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "i.e. 123-456-7890, 123.456.7890, or (123) 456-7890",
+            "prepend": "",
+            "append": "",
+            "maxlength": 24
+        },
+        {
             "key": "field_61a019d915c90",
             "label": "Phone number",
             "name": "phone_number",
@@ -62,25 +81,6 @@
             "min": "",
             "max": "",
             "step": ""
-        },
-        {
-            "key": "field_61a01a5015c91",
-            "label": "Phone number text",
-            "name": "phone_number_text",
-            "type": "text",
-            "instructions": "Add the phone number structure. i.e. 123-456-7890, 123.456.7890, or (123) 456-7890. This is used to show the visitors the number.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "65",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "i.e. 123-456-7890, 123.456.7890, or (123) 456-7890",
-            "prepend": "",
-            "append": "",
-            "maxlength": 24
         },
         {
             "key": "field_61a01bd7a8fe8",
@@ -713,5 +713,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652830654
+    "modified": 1663374251
 }

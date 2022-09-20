@@ -23,15 +23,15 @@ h3.theme-override {
     margin: 0 !important;
 }
 
- .testimonials-wrapper-div {
+ .swiper-wrapper-div {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
 }
 
- .testimonials-wrapper-div:after {
+ .swiper-wrapper-div:after {
     z-index: 9999;
-    content: "Testimonial preview unavailable. The JS library is not loaded here to save resources. This is normal, please check the front-end of the website to see testimonials. You may still add, remove, and edit testmonials by clicking on this block." !important;
+    content: "Preview unavailable. The JS library is not loaded here to save resources. This is normal, please check the front-end of the website to see this block. You may still add, remove, and edit this block and its content by clicking on the block here." !important;
     display: inline-block !important;
     color: #000000 !important;
     background-color: #e4be40 !important;
@@ -41,7 +41,7 @@ h3.theme-override {
     padding: 24px !important;
  }
 
-  .testimonials-wrapper-div div {
+  .swiper-wrapper-div div {
     display: none !important;
     position: relative !important;
  }

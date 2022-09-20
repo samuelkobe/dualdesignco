@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_styles_wp_theme_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../../../../src/styles/wp-theme.css */ \"./src/styles/wp-theme.css\");\n/* harmony import */ var _src_styles_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../../../../src/styles/main.css */ \"./src/styles/main.css\");\n/* harmony import */ var _src_styles_fonts_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../src/styles/fonts.css */ \"./src/styles/fonts.css\");\n/* harmony import */ var _src_styles_components_nav_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/nav.css */ \"./src/styles/components/nav.css\");\n/* harmony import */ var _src_styles_components_button_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/button.css */ \"./src/styles/components/button.css\");\n/* harmony import */ var _src_styles_components_faqs_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/faqs.css */ \"./src/styles/components/faqs.css\");\n/* harmony import */ var _src_styles_components_footer_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/footer.css */ \"./src/styles/components/footer.css\");\n/* harmony import */ var _src_styles_components_editor_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/editor.css */ \"./src/styles/components/editor.css\");\n/* harmony import */ var _src_styles_plugins_mc4wp_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../../../../../src/styles/plugins/mc4wp.css */ \"./src/styles/plugins/mc4wp.css\");\n// Required CSS\n\n\n // Component CSS\n\n\n\n\n // Editor Override CSS\n\n // Plugin Override CSS\n\n\n\n//# sourceURL=webpack://tailwind-webpack-starter/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_styles_wp_theme_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../../../../src/styles/wp-theme.css */ \"./src/styles/wp-theme.css\");\n/* harmony import */ var _src_styles_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../../../../src/styles/main.css */ \"./src/styles/main.css\");\n/* harmony import */ var _src_styles_fonts_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../src/styles/fonts.css */ \"./src/styles/fonts.css\");\n/* harmony import */ var _src_styles_components_nav_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/nav.css */ \"./src/styles/components/nav.css\");\n/* harmony import */ var _src_styles_components_button_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/button.css */ \"./src/styles/components/button.css\");\n/* harmony import */ var _src_styles_components_faqs_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/faqs.css */ \"./src/styles/components/faqs.css\");\n/* harmony import */ var _src_styles_components_footer_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/footer.css */ \"./src/styles/components/footer.css\");\n/* harmony import */ var _src_styles_components_editor_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/editor.css */ \"./src/styles/components/editor.css\");\n/* harmony import */ var _src_styles_components_swiper_styles_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../../../../../src/styles/components/swiper-styles.css */ \"./src/styles/components/swiper-styles.css\");\n/* harmony import */ var _src_styles_plugins_mc4wp_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../../../../../src/styles/plugins/mc4wp.css */ \"./src/styles/plugins/mc4wp.css\");\n/* harmony import */ var _src_styles_plugins_wpcf7_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../../../../../src/styles/plugins/wpcf7.css */ \"./src/styles/plugins/wpcf7.css\");\n// Required CSS\n\n\n // Component CSS\n\n\n\n\n // Editor Override CSS\n\n\n // Plugin Override CSS\n\n\n\n\n//# sourceURL=webpack://tailwind-webpack-starter/./src/index.js?");
 
 /***/ }),
 
@@ -70,6 +70,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/styles/components/swiper-styles.css":
+/*!*************************************************!*\
+  !*** ./src/styles/components/swiper-styles.css ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://tailwind-webpack-starter/./src/styles/components/swiper-styles.css?");
+
+/***/ }),
+
 /***/ "./src/styles/fonts.css":
 /*!******************************!*\
   !*** ./src/styles/fonts.css ***!
@@ -97,6 +107,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://tailwind-webpack-starter/./src/styles/plugins/mc4wp.css?");
+
+/***/ }),
+
+/***/ "./src/styles/plugins/wpcf7.css":
+/*!**************************************!*\
+  !*** ./src/styles/plugins/wpcf7.css ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://tailwind-webpack-starter/./src/styles/plugins/wpcf7.css?");
 
 /***/ }),
 

@@ -11,6 +11,8 @@ import '/src/styles/components/footer.css';
 
 // Editor Override CSS
 import '/src/styles/components/editor.css';
+import "/src/styles/components/swiper-styles.css";
 
 // Plugin Override CSS
 import '/src/styles/plugins/mc4wp.css';
+import '/src/styles/plugins/wpcf7.css';

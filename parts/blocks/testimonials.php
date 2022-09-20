@@ -47,16 +47,12 @@ if ( have_rows( 'id' ) ) : ?>
 
 <section id="<?php echo $block_id ?>" class="w-full mt-8 lg:mt-24 mb-<?php echo get_field( 'bottom_spacing' ); ?>">
     <div class="relative flex flex-col items-center contained rounded bg-brand-alt p-20 2xl:p-24 shadow-xl mx-6 2xl:mx-auto">
-
-        <div class="w-auto whitespace-nowrap absolute bottom-8 2xl:bottom-12 left-6 lg:left-24">
-            <div class="swiper-pagination"></div>
-        </div>
         
         <div class="max-w-full mb-12 lg:mb-16 flex">
             <h2 class="font-title text-black text-5xl leading-tight lg:text-6xl lg:leading-snug w-auto border-b-2 border-dotted border-black pb-4 lg:pb-10"><?php the_field( 'testimonials_group_title' ); ?></h2>
         </div>
 
-        <div class="w-full swiper testimonials-wrapper-div">
+        <div class="w-full swiperTestimonial swiper-wrapper-div overflow-x-hidden">
             
             <?php if ( have_rows( 'testimonials' ) ) : ?>
                 <div class="w-full swiper-wrapper">
@@ -76,30 +72,13 @@ if ( have_rows( 'id' ) ) : ?>
                         </div>
                     <?php endwhile; ?>
                 </div>
-            <?php else : ?>
-                <?php // No rows found ?>
+                    <div class="w-auto whitespace-nowrap absolute bottom-8 2xl:bottom-12 left-6 lg:left-12 2xl:left-24">
+                    <div class="swiper-pagination"></div>
+                </div>
             <?php endif; ?>
         </div>
 
     </div>
 </section>
 
-<script type="module">
-    // init homeSwiper:
-    const testimonialsSwiper = new Swiper(".swiper", {
-    slidesPerView: 1,   
-    loop: true,
-    autoplay: {
-        delay: 5500,
-    },
-    speed: 1000,
-    allowTouchMove: true,
-    simulateTouch: true,
-    grabCursor: true,
-    pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true,
-    }
-    });
-</script>
+
