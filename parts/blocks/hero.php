@@ -59,7 +59,7 @@ if ( ! empty( $block['align'] ) ) {
         
         <?php if ( get_field( 'page_hero' ) == 1 ) : // this checks to see if the page hero is in overlay mode or 50/50 mode.?>
         <section class="flex relative w-full mt-16 lg:mt-0 mb-<?php echo get_field( 'bottom_spacing' ); ?> px-4 xl:px-0 overflow-hidden <?php echo $hero_height ?>">
-            <div class="absolute left-0 top-0 h-full w-full bg-black z-10 opacity-50 pointer-events-none"></div>
+            <div class="absolute left-0 top-0 h-full w-full bg-black z-10 opacity-30 pointer-events-none"></div>
 
             <?php if ( get_field( 'background_type' ) == 1 ) : ?>
                 <?php if ( $background_image ) : ?>
@@ -104,7 +104,7 @@ if ( ! empty( $block['align'] ) ) {
         <section class="w-full flex flex-col lg:flex-row mt-20 mb-4 lg:mb-<?php echo get_field( 'bottom_spacing' ); ?> h-auto lg:h-[60vh] xl:h-[75vh] lg:min-h-[640px] 2xl:min-h-[720px]">
 
             <div class="flex w-full lg:w-7/12 min-h-[240px] sm:min-h-[320px] h-1/2 lg:h-full relative lg:order-2 z-0">
-                <div class="absolute left-0 top-0 h-full w-full bg-black z-10 opacity-20 pointer-events-none"></div>
+                <!-- <div class="absolute left-0 top-0 h-full w-full bg-black z-10 opacity-20 pointer-events-none"></div> -->
                 <?php if ( get_field( 'background_type' ) == 1 ) : ?>
                     <?php if ( $background_image ) : ?>
                         <img class="absolute inset-0 w-full h-full object-cover theme-override shadow-xl" src="<?php echo esc_url( $background_image['url'] ); ?>" alt="<?php echo esc_attr( $background_image['alt'] ); ?>" />

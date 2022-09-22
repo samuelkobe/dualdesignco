@@ -3,6 +3,44 @@
     "title": "Custom Form",
     "fields": [
         {
+            "key": "field_632a458a01b50",
+            "label": "Form Title",
+            "name": "form_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_632a459301b51",
+            "label": "Form Subtitle",
+            "name": "form_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_63251623dd06d",
             "label": "Form Embed",
             "name": "form_embed",
@@ -17,7 +55,7 @@
             },
             "default_value": "",
             "tabs": "text",
-            "media_upload": 1,
+            "media_upload": 0,
             "toolbar": "full",
             "delay": 0
         }
@@ -40,5 +78,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663374920
+    "modified": 1663822674
 }

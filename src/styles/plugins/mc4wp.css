@@ -18,7 +18,7 @@ footer #email_newsletter {
 }
 
 #mc4wp-form-1 .submit {
-    @apply w-32 xl:w-40 justify-center pt-2 pb-1 xl:pt-2 px-3 xl:pb-1 xl:px-4 rounded no-underline inline-flex text-white font-button text-xl 2xl:text-2xl bg-brand-fourth hover:bg-brand-third transition-colors duration-200 uppercase cursor-pointer;
+    @apply w-32 xl:w-40 justify-center pt-2 pb-1 xl:pt-2 px-3 xl:pb-1 xl:px-4 rounded no-underline inline-flex text-white font-button text-xl 2xl:text-2xl bg-brand-fourth hover:bg-[#673327] transition-colors duration-200 uppercase cursor-pointer;
  }
 
 #mc4wp-form-1 .mc4wp-response .mc4wp-alert,

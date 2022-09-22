@@ -1,46 +1,47 @@
-.wpcf7-form input, .wpcf7-form textarea {
-  @apply text-brand-black
-         rounded
-         border-transparent
-         placeholder-gray-400
-         focus:outline-none
-         outline-none
-         ring-2
-         ring-gray-400
-         focus:ring-2
-         focus:ring-brand-fourth
-         focus:text-brand-black
-         focus:border-transparent
-         p-4
-         w-full
-         max-w-full;
+.wpcf7-form input.wpcf7-text, .wpcf7-form textarea.wpcf7-textarea {
+  @apply
+  w-full
+  text-brand-black
+  bg-gray-100
+  border-2
+  border-gray-300
+  rounded
+  p-2
+  placeholder-gray-400
+  focus:text-brand-black
+  focus:outline-brand-third
+  focus:placeholder-brand-third;
 }
+
 .wpcf7-form input {
-  @apply h-12 lg:h-16;
+  @apply h-10 lg:h-12;
 }
+
 .wpcf7-form textarea {
-  @apply h-24 lg:h-48;
+  @apply w-full h-24 lg:h-48;
 }
-.wpcf7-form #radio-object, .wpcf7-form .wpcf7-checkbox {
-  @apply flex flex-row w-full mt-2;
+
+.wpcf7-form .wpcf7-radio, .wpcf7-form .wpcf7-checkbox {
+  @apply flex flex-col w-full;
 }
-.wpcf7-form #radio-object .wpcf7-list-item.first, .wpcf7-form #radio-object .wpcf7-list-item.last, .wpcf7-form #radio-object .wpcf7-list-item, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
+
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.first, .wpcf7-form .wpcf7-radio .wpcf7-list-item.last, .wpcf7-form .wpcf7-radio .wpcf7-list-item, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
   @apply flex flex-row items-center;
 }
-.wpcf7-form #radio-object .wpcf7-list-item.first label, .wpcf7-form #radio-object .wpcf7-list-item.last label, .wpcf7-form #radio-object .wpcf7-list-item label, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item label {
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.first label, .wpcf7-form .wpcf7-radio .wpcf7-list-item.last label, .wpcf7-form .wpcf7-radio .wpcf7-list-item label, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item label {
   @apply flex flex-row items-center;
 }
-.wpcf7-form #radio-object .wpcf7-list-item.first label input, .wpcf7-form #radio-object .wpcf7-list-item.last label input, .wpcf7-form #radio-object .wpcf7-list-item label input, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label input, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label input, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item label input {
-  @apply w-4 h-4 ml-2;
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.first label input, .wpcf7-form .wpcf7-radio .wpcf7-list-item.last label input, .wpcf7-form .wpcf7-radio .wpcf7-list-item label input, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label input, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label input, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item label input {
+  @apply w-4 h-4 mr-2;
 }
-.wpcf7-form #radio-object .wpcf7-list-item.first label span, .wpcf7-form #radio-object .wpcf7-list-item.last label span, .wpcf7-form #radio-object .wpcf7-list-item label span, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label span, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label span, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item label span {
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.first label span, .wpcf7-form .wpcf7-radio .wpcf7-list-item.last label span, .wpcf7-form .wpcf7-radio .wpcf7-list-item label span, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label span, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label span, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item label span {
   @apply text-lg lg:text-xl text-brand-black;
 }
-.wpcf7-form #radio-object .wpcf7-list-item.first, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first {
+.wpcf7-form .wpcf7-radio .wpcf7-list-item, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
   @apply ml-0;
 }
 .wpcf7-form input.wpcf7-submit {
-  @apply bg-brand-fourth w-auto border-none ring-0 min-w-32 h-auto lg:min-w-40 text-center py-2 lg:py-3 px-4 mt-2 inline-block lg:px-6 rounded no-underline text-white uppercase font-bold tracking-wider text-sm lg:text-lg font-button transition-colors duration-300 cursor-pointer;
+  @apply bg-brand-fourth border-none ring-0 text-center py-2 lg:py-3 lg:px-6 font-bold tracking-wider lg:text-lg w-fit justify-center mt-2 pt-2 pb-1 xl:pt-2 px-3 xl:pb-1 xl:px-4 rounded no-underline shadow-xl inline-flex text-white font-button text-xl 2xl:text-2xl transition-colors duration-300 uppercase cursor-pointer;
 }
 .wpcf7-form input.wpcf7-submit:hover {
   background-color: #673327;
@@ -59,14 +60,9 @@
 .wpcf7-form .ajax-loader {
   @apply absolute m-0 -left-3 top-3;
 }
-.wpcf7-form input:focus, .wpcf7-form textarea:focus, .wpcf7-form .wpcf7-select:focus {
-  @apply border border-brand-fourth;
-  box-shadow: 0 0 1px 1px #894837;
-  box-shadow: 0 0 0 1px -moz-mac-focusring;
-  outline: none;
-}
+
 .wpcf7-form .wordpress-content.wrapper-content {
-  @apply flex flex-row w-full flex-wrap mb-4;
+  @apply flex flex-row w-full flex-wrap my-2 lg:mb-6 lg:mt-8;
 }
 .wpcf7-form .wordpress-content.left-content {
   @apply flex flex-col w-full lg:w-1/2 max-w-full pr-0 lg:pr-4 mb-2;
@@ -78,7 +74,7 @@
   @apply mb-8;
 }
 .wpcf7-form .wordpress-content .form-title-label {
-  @apply text-lg lg:text-2xl text-brand-black font-semibold mb-2 inline-block;
+  @apply text-lg xl:text-xl text-brand-black font-sans font-semibold mb-2 inline-block;
 }
 .wpcf7-form .wordpress-content .form-title-label.thin-title {
   @apply font-light mt-6 lg:mt-12;

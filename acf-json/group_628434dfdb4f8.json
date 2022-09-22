@@ -69,7 +69,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -78,6 +78,30 @@
                         "rounded": "Rounded",
                         "rounded-2xl": "More rounded",
                         "rounded-full": "Full rounded"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_632a4cec3e320",
+                    "label": "Image Shape",
+                    "name": "image_shape",
+                    "type": "radio",
+                    "instructions": "Choose the treatment on the image's shape. 1:1 square or 16:9 rectangle.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "aspect-square": "Square",
+                        "aspect-video": "Rectangle (landscape)."
                     },
                     "allow_null": 0,
                     "other_choice": 0,
@@ -261,5 +285,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1662943420
+    "modified": 1663716684
 }

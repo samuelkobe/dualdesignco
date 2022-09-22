@@ -56,6 +56,7 @@ add_filter('get_custom_logo', 'webokstarter_custom_class_replace', 10);
     // rounded-none rounded rounded-2xl rounded-full - image rounded for side by side block
     // w-full lg:w-1/4 lg:w-1/2 lg:w-3/4 lg:w-full - image size for feature image block
 	// shadow-custom bg-transparent bg-white bg-brand-alt - steps bg style
+	// text-brand-main text-brand-third - text colours for forms
 
 
  /*------------------------------------*\
@@ -402,12 +403,39 @@ function footer_nav()
 	);
 }
 
+/* ####### Footer Navigation ####### */
+function footer_nav_alt()
+{
+	wp_nav_menu(
+	array(
+		'theme_location'  => 'footer-menu-alt',
+		'menu'            => '',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
+		'container_id'    => '',
+		'menu_class'      => 'menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => false,
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+		'items_wrap'      => '<ul class="text-base xl:leading-8">%3$s</ul>',
+		'depth'           => 0,
+        'add_li_class'    => '',
+		'walker'          => false
+		)
+	);
+}
+
 /* ####### Register Navigation Options ####### */
 function register_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'web-ok-starter'), // Header/Main Navigation
-        'footer-menu' => __('Footer Menu', 'web-ok-starter'), // Footer Navigation
+        'footer-menu' => __('Footer Menu - Support', 'web-ok-starter'), // Footer Navigation
+        'footer-menu-alt' => __('Footer Menu - Reach out', 'web-ok-starter'), // Footer Navigation
     ));
 }
 

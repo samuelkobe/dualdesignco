@@ -53,7 +53,7 @@ if ( ! empty( $block['align'] ) ) {
 		<div class="w-full flex flex-col gap-y-8 lg:gap-y-10">
 
 			<div class="hidden md:grid grid-cols-6 gap-x-4 font-sans font-semibold text-xl lg:text-2xl">
-				<p class="col-span-2">Package</p>
+				<p class="col-span-2">E-Design Packages</p>
 				<p class="col-span-2">Dimensions</p>
 				<p class="">Cost</p>
 				<div class="relative w-32 lg:w-48"><?php the_sub_field( 'package_shortcode' ); ?></div>

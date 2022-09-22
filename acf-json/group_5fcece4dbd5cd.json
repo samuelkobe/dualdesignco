@@ -43,46 +43,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_61a01a5015c91",
-            "label": "Phone number text",
-            "name": "phone_number_text",
-            "type": "text",
-            "instructions": "Add the phone number structure. i.e. 123-456-7890, 123.456.7890, or (123) 456-7890. This is used to show the visitors the number.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "65",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "i.e. 123-456-7890, 123.456.7890, or (123) 456-7890",
-            "prepend": "",
-            "append": "",
-            "maxlength": 24
-        },
-        {
-            "key": "field_61a019d915c90",
-            "label": "Phone number",
-            "name": "phone_number",
-            "type": "number",
-            "instructions": "Add the phone number with no other characters. i.e. '1234567890'.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "35",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "i.e. 1234567890",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
             "key": "field_61a01bd7a8fe8",
             "label": "Contact email link text",
             "name": "contact_email_link_text",
@@ -179,7 +139,7 @@
         },
         {
             "key": "field_61a0450ef4110",
-            "label": "Open Graph",
+            "label": "SEO + Open Graph",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -192,6 +152,25 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_632bf2d783a3c",
+            "label": "SEO keywords",
+            "name": "seo_keywords",
+            "type": "text",
+            "instructions": "Add keywords for SEO purposes. Separate each with a comma. \r\ni.e.\r\nExample A, Example B, Example C",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_625735e9ee731",
@@ -713,5 +692,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663374251
+    "modified": 1663824694
 }

@@ -15,6 +15,9 @@ if (document.querySelectorAll(".swiperPairedImages").length > 0) {
         allowTouchMove: true,
         simulateTouch: true,
         grabCursor: true,
+        autoplay: {
+          delay: 5500,
+        },
         effect: "creative",
         speed: 750,
         creativeEffect: {

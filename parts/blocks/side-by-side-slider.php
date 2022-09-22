@@ -44,7 +44,7 @@ if ( ! empty( $block['align'] ) ) {
 
     <div class="container mx-auto flex flex-col lg:flex-row px-6 lg:px-0 py-8 lg:py-16">
 
-        <div class="w-full lg:w-5/12 lg:order-2 lg:px-1/24 mb-6 lg:mb-0">
+        <div class="w-full lg:w-1/2 lg:order-2 lg:px-1/24 mb-6 lg:mb-0">
             <?php if ( have_rows( 'image_settings' ) ) : ?>
                 <?php while ( have_rows( 'image_settings' ) ) : the_row(); ?>
 
@@ -77,11 +77,11 @@ if ( ! empty( $block['align'] ) ) {
             <?php endif; ?>
         </div>
 
-        <div class="w-full lg:w-7/12 flex flex-col justify-center <?php echo $content_order . ' ' . $content_padding ;?>">
+        <div class="w-full lg:w-1/2 flex flex-col justify-center <?php echo $content_order . ' ' . $content_padding ;?>">
             <?php if ( have_rows( 'content' ) ) : ?>
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
-                    <h2 class="mt-4 font-title text-3xl lg:text-4xl 2xl:text-6xl 2xl:leading-tight"><?php the_sub_field( 'header' ); ?></h2>
-                    <p class="font-normal text-base lg:text-lg 2xl:text-xl w-full mt-8 2xl:leading-relaxed"><?php the_sub_field( 'content' ); ?></p>
+                    <h2 class="mt-4 font-title text-2xl lg:text-3xl 2xl:text-5xl 2xl:leading-tight"><?php the_sub_field( 'header' ); ?></h2>
+                    <p class="font-normal text-base lg:text-lg 2xl:text-xl w-full mt-2 lg:mt-4 2xl:mt-6 2xl:leading-relaxed"><?php the_sub_field( 'content' ); ?></p>
                     <?php if ( get_sub_field( 'button_toggle' ) == 1 ) : ?>
                         <?php $button_link = get_sub_field( 'button_link' ); ?>            
                         <?php if ( $button_link ) : ?>

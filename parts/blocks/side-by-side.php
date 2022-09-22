@@ -44,18 +44,19 @@ if ( ! empty( $block['align'] ) ) {
 
     <div class="container mx-auto flex flex-col lg:flex-row px-6 lg:px-0 py-8 lg:py-16">
 
-        <div class="w-full lg:w-5/12 lg:order-2 lg:px-1/24 mb-6 lg:mb-0">
+        <div class="w-full lg:w-1/2 lg:order-2 lg:px-1/24 mb-6 lg:mb-0">
             <?php if ( have_rows( 'image_settings' ) ) : ?>
                 <?php while ( have_rows( 'image_settings' ) ) : the_row(); ?>
 
                     <?php 
                         $image = get_sub_field( 'image' );
                         $rounding = get_sub_field( 'image_rounding' );
+                        $shape = get_sub_field( 'image_shape' );
                     ?>
 
                     <div class="h-full flex items-center">
                         <?php if ( $image ) : ?>
-                            <img class="max-w-full shadow-xl object-cover aspect-square <?php echo $rounding ?>" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+                            <img class="max-w-full shadow-xl object-cover aspect-square <?php echo $shape . ' ' . $rounding ?>" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
                         <?php endif; ?>
                     </div>
 
@@ -63,7 +64,7 @@ if ( ! empty( $block['align'] ) ) {
             <?php endif; ?>
         </div>
 
-        <div class="w-full lg:w-7/12 flex flex-col justify-center <?php echo $content_order . ' ' . $content_padding ;?>">
+        <div class="w-full lg:w-1/2 flex flex-col justify-center <?php echo $content_order . ' ' . $content_padding ;?>">
             <?php if ( have_rows( 'content' ) ) : ?>
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
                     <h2 class="mt-4 font-title text-3xl lg:text-4xl 2xl:text-6xl 2xl:leading-tight"><?php the_sub_field( 'header' ); ?></h2>

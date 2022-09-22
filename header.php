@@ -5,6 +5,7 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="<?php the_field( 'seo_keywords', 'option' ); ?>">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		
 		<meta property="og:title" content="<?php the_field( 'open_graph_title', 'option' ); ?>" />
@@ -20,8 +21,8 @@
 
 		<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-		<script src="https://unpkg.com/vue@3"></script>
-		<!-- <script src="https://unpkg.com/vue@3.2.33/dist/vue.global.prod.js"></script> -->
+		<!-- <script src="https://unpkg.com/vue@3"></script> -->
+		<script src="https://unpkg.com/vue@3.2.33/dist/vue.global.prod.js"></script>
 
 	</head>
 	<body <?php body_class(); ?>>
