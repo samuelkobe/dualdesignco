@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 <?php
 /**
  * Block template file: parts/blocks/fifty-fifty.php
@@ -62,12 +51,12 @@ if ( ! empty( $block['align'] ) ) {
 
                     <?php if ( have_rows( 'left_content' ) ) : ?>
                         <?php while ( have_rows( 'left_content' ) ) : the_row(); ?>
-
+                        
                             <div class="flex">
                                 <h2 class="mb-4 lg:mb-6 pb-3 lg:pb-5 font-title text-4xl 2xl:text-5xl border-b-2 border-dotted border-black"><?php the_sub_field( 'name' ); ?></h2>
                             </div>
                             <?php if ( get_sub_field( 'content_toggle' ) == 1 ) : ?>
-                                <p class="mb-4 lg:mb-8 font-sans text-base lg:text-lg 2xl:text-xl leading-relaxed lg:leading-relaxed 2xl:leading-relaxed lg:min-h-[160px] xl:min-h-[120px]"><?php the_sub_field( 'content' ); ?></p>
+                                <p class="mb-4 lg:mb-8 font-sans text-base lg:text-lg 2xl:text-xl leading-relaxed lg:leading-relaxed 2xl:leading-relaxed lg:min-h-[160px] xl:min-h-[140px]"><?php the_sub_field( 'content' ); ?></p>
                             <?php endif; ?>
 
                             <?php $image = get_sub_field( 'image' ); ?>
@@ -100,7 +89,7 @@ if ( ! empty( $block['align'] ) ) {
                                 <h2 class="mb-4 lg:mb-6 pb-3 lg:pb-5 font-title text-4xl 2xl:text-5xl border-b-2 border-dotted border-black"><?php the_sub_field( 'name' ); ?></h2>
                             </div>
                             <?php if ( get_sub_field( 'content_toggle' ) == 1 ) : ?>
-                                <p class="mb-4 lg:mb-8 font-sans text-base lg:text-lg 2xl:text-xl leading-relaxed lg:leading-relaxed 2xl:leading-relaxed lg:min-h-[160px] xl:min-h-[120px]"><?php the_sub_field( 'content' ); ?></p>
+                                <p class="mb-4 lg:mb-8 font-sans text-base lg:text-lg 2xl:text-xl leading-relaxed lg:leading-relaxed 2xl:leading-relaxed lg:min-h-[160px] xl:min-h-[140px]"><?php the_sub_field( 'content' ); ?></p>
                             <?php endif; ?>
 
                             <?php $image = get_sub_field( 'image' ); ?>
