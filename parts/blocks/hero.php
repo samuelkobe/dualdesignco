@@ -40,7 +40,7 @@ if ( ! empty( $block['align'] ) ) {
         $hero_height = 'h-[65vh] lg:h-[90vh] min-h-[240px] md:min-h-[480px] xl:min-h-[640px]';
         $title_styles = 'lg:mt-6 lg:mb-4';
     else :
-        $hero_height = 'h-[25vh] lg:h-[50vh] min-h-[120px] md:min-h-[240px] xl:min-h-[480px]';
+        $hero_height = 'h-[25vh] lg:h-[50vh] min-h-[240px] md:min-h-[360px] xl:min-h-[480px]';
         $title_styles = 'lg:mt-0 lg:mb-4';
     endif;
 
@@ -72,8 +72,8 @@ if ( ! empty( $block['align'] ) ) {
             <div class="w-full py-8 md:py-16 lg:mt-0 contained flex-col lg:flex-row items-center justify-center relative z-20 text-white">
 
                 <div class="w-full order-2 relative">
-                    <h1 class="mb-2 font-title capitalize <?php echo $title_styles;?> text-5xl lg:text-6xl 2xl:text-8xl leading-none lg:leading-tight xl:leading-snug"><?php the_field( 'hero_title' ); ?></h1>
-                    <p class="font-normal text-lg lg:text-xl 2xl:text-2xl w-full md:w-5/6 lg:w-3/4 "><?php the_field( 'hero_content' ); ?></p>
+                    <h1 class="mb-2 mt-2 md:mt-0 font-title capitalize <?php echo $title_styles;?> text-5xl lg:text-6xl 2xl:text-8xl leading-none lg:leading-tight xl:leading-snug"><?php the_field( 'hero_title' ); ?></h1>
+                    <p class="font-normal text-base lg:text-xl 2xl:text-2xl w-full md:w-5/6 lg:w-3/4 "><?php the_field( 'hero_content' ); ?></p>
                     
                     <?php if ( get_field( 'button_toggle' ) == 1 ) : ?>
                         <?php $button_link = get_field( 'button_link' ); ?>            
