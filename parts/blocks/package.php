@@ -45,19 +45,19 @@ if ( ! empty( $block['align'] ) ) {
 
     <div class="container mx-auto flex flex-col pb-8 pt-16 lg:py-24">
 
-		<div class="flex flex-col items-center mb-12 lg:mb-16">
+		<div class="flex flex-col items-center">
 			<p class="mb-4 lg:mb-6 font-handwriting text-lg lg:text-2xl"><?php the_field( 'block_subtitle' ); ?></p>
 			<h1 class="font-title text-4xl lg:text-5xl 2xl:text-6xl text-center"><?php the_field( 'block_title' ); ?></h1>
 		</div>
 
 		<div class="w-full flex flex-col gap-y-8 lg:gap-y-10">
-
+<!-- 
 			<div class="hidden md:grid grid-cols-6 gap-x-4 font-sans font-semibold text-xl lg:text-2xl">
 				<p class="col-span-2">E-Design Packages</p>
 				<p class="col-span-2">Dimensions</p>
 				<p class="">Cost</p>
-				<div class="relative w-32 lg:w-48"><?php the_sub_field( 'package_shortcode' ); ?></div>
-			</div>
+				<div class="relative w-32 lg:w-48"><?//php the_sub_field( 'package_shortcode' ); ?></div>
+			</div> -->
 			
 			<?php if ( have_rows( 'packages' ) ) : ?>
 				<?php while ( have_rows( 'packages' ) ) : the_row(); ?>
